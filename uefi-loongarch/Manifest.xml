@@ -9,7 +9,7 @@
   </ProjectInfo>
 
   <GeneralConfig>
-    <PinPath>uefi-loongarch/pins</PinPath>
+    <PinPath>myedkrepo/uefi-loongarch/pins</PinPath>
     <DefaultCombo combination="master" />
     <CurrentClonedCombo combination="master" />
   </GeneralConfig>
@@ -19,7 +19,7 @@
 
   <RemoteList>
     <!-- The 'name' attribute for each Remote tag must be unique. -->
-    <Remote name="rd">ssh://zhubo@rd.loongson.cn:29418/uefi-loongarch</Remote>
+    <Remote name="uefi-loongarch">ssh://zhubo@rd.loongson.cn:29418/uefi-loongarch</Remote>
     <Remote name="Ls2c5lc2">git@gitlab.gen.cn:bios/Ls2c5lc2.git</Remote>
   </RemoteList>
 
@@ -36,12 +36,12 @@
 
     <!-- 2311 -->
     <Combination name="master" description="The master codeline">
-      <Source localRoot="rd" remote="rd" branch="master" enableSubmodule="true" />
-      <Source localRoot="c2" remote="Ls2c5lc2" branch="master" sparseCheckout="true" />
+      <Source localRoot="uefi-loongarch" remote="uefi-loongarch" branch="master" enableSubmodule="true" />
+      <Source localRoot="uefi-loongarch/LsRefCodePkg/SampleCode/Ls2c5lc2" remote="Ls2c5lc2" branch="master" sparseCheckout="true" />
     </Combination>
     <Combination name="2305" description="The 2305 codeline, ok">
-      <Source localRoot="rd" remote="rd" tag="stable202305" enableSubmodule="true" />
-      <Source localRoot="c2" remote="Ls2c5lc2" commit="49f3e5c7e6d1ac795f2faba90c82faf70762eca6" sparseCheckout="true" />
+      <Source localRoot="uefi-loongarch" remote="uefi-loongarch" tag="stable202305" enableSubmodule="true" />
+      <Source localRoot="uefi-loongarch/LsRefCodePkg/SampleCode/Ls2c5lc2" remote="Ls2c5lc2" commit="49f3e5c7e6d1ac795f2faba90c82faf70762eca6" sparseCheckout="true" />
     </Combination>
 
   </CombinationList>
